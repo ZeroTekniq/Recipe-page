@@ -1,0 +1,241 @@
+:root {
+/* Colors */
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+/* Sizes */
+    --mobile: 375px;
+    --desktop: 1440px;
+/* Font Weights */
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+/* Fonts */
+    --font-outfit: 'Outfit', sans-serif;
+    --font-young-serif: 'Young Serif', serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* For Accessibility/Screen readers only */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: fit-content;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+}
+.spacing {
+    margin: 0 2rem;
+}
+section {
+    margin-top: 2rem;
+}
+
+img {
+    align-self: stretch;
+    display: block;
+    width: 100%;
+}
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+}
+.title {
+    align-self: stretch;
+    color: var(--Stone-900);
+    font-family: var(--font-young-serif);
+    font-weight: var(--fw-400);
+    font-style: normal;
+    font-size: 2.25rem;
+    line-height: 100%;
+}
+.description {
+    align-self: stretch;
+    color: var(--Stone-600);
+    font-family: var(--font-outfit);
+    font-weight: var(--fw-400);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.time-container {
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 0.75rem;
+    background: var(--Rose-50);
+}
+#prep-time-heading {
+    align-self: stretch;
+    color: var(--Rose-800);
+    font-family: var(--font-outfit);
+    font-weight: var(--fw-600);
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
+.prep-time, .instructions, .ingredients {
+    color: var(--Stone-600);
+    font-family: var(--font-outfit);
+    font-weight: var(--fw-400);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.prep-time {
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+}
+.prep-time li, .instructions li, .ingredients li {
+    padding-left: 1rem;
+}
+.prep-time strong, .instructions strong {
+    font-weight: var(--fw-700);
+    color: var(--Stone-600);
+}
+.prep-time p, .instructions p, .ingredients p {
+    display: inline;
+    color: var(--Stone-600);
+}
+.time-container, .ingredients-container, 
+.nutrition-container, .instructions-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+}
+#ingredients-heading, #nutrition-heading, #instructions-heading{
+    margin-left: -1.5rem;
+    align-self: stretch;
+    color: var(--Rose-800);
+    font-family: var(--font-young-serif);
+    font-weight: var(--fw-400);
+    font-style: normal;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+}
+.ingredients, .instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+}
+.instructions {
+    color: var(--Rose-800);
+}
+.nutrition-container p {
+    margin-left: -1.5rem;
+}
+.nutrition-table {
+    width: 100%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+}
+tr {
+    border-bottom: 1px solid var(--Stone-150);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150, 0.75rem);
+    align-self: stretch;
+}
+th {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    color: var(--Stone-600);
+    font-family: var(--font-outfit);
+    font-weight: var(--fw-400);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+td {
+    width: 50%;
+    color: var(--Brown-800);
+    font-family: var(--font-outfit);
+    font-weight: var(--fw-700);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+footer {
+    margin: 2rem;
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 48rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--Stone-100);
+    }
+    .container {
+        margin: 8rem 3rem;
+        display: flex;
+        width: 38.5rem;
+        padding: 2.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        flex: 1 0 0;
+        border-radius: 1.5rem;
+        background: var(--White);
+    }
+    img {
+        width: 100%;
+        border-radius: 0.75rem;
+        align-self: stretch;
+        margin-bottom: -1.5rem;
+    }
+    .spacing {
+        margin: 0;
+    }
+}
+@media (min-width: 90rem) {
+    .container {
+        width: 46rem;
+        flex-shrink: 0;
+    }
+} 
+
