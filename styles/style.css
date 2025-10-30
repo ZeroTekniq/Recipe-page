@@ -151,6 +151,8 @@ img {
     align-items: flex-start;
     gap: 0.5rem;
     align-self: stretch;
+    border-bottom: 1px solid var(--Stone-150);
+    padding-bottom: 2rem;
 }
 .instructions {
     color: var(--Rose-800);
@@ -167,6 +169,7 @@ table {
 }
 tr {
     border-bottom: 1px solid var(--Stone-150);
+    width: 100%;
     display: flex;
     align-items: center;
     gap: var(--spacing-150, 0.75rem);
