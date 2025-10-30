@@ -176,7 +176,7 @@ table {
     width: 100%;
 }
 tr {
-    padding: 1.5rem 0 1.5rem 0.75rem;
+    padding: 0.75rem 0 0.75rem 0.75rem;
     border-bottom: 1px solid var(--Stone-150);
     width: 100%;
     display: flex;
