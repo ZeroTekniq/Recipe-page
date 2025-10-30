@@ -138,7 +138,7 @@ img {
 #ingredients-heading, #nutrition-heading, #instructions-heading{
     margin-left: -1.5rem;
     align-self: stretch;
-    color: var(--Rose-800);
+    color: var(--Brown-800);
     font-family: var(--font-young-serif);
     font-weight: var(--fw-400);
     font-style: normal;
